@@ -12,8 +12,8 @@
 - cd dioxus-static-hydration/
 - dx build --features web --release
 - cargo run --features ssr
-- cd docs/
-- http-server
+- cd dist/
+- http-server -o
 
 ## History
 

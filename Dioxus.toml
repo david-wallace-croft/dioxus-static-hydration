@@ -8,15 +8,15 @@ name = "Dioxus"
 default_platform = "web"
 
 # `build` & `serve` dist path
-out_dir = "docs"
+out_dir = "dist"
 
 # resource (public) file folder
-asset_dir = "public"
+asset_dir = "assets"
 
 [web.app]
 
 # HTML title tag content
-title = "dioxus | ⛺"
+title = "CroftSoft Dioxus Static Hydration Prototype"
 
 [web.watcher]
 
@@ -24,13 +24,13 @@ title = "dioxus | ⛺"
 reload_html = true
 
 # which files or dirs will be watcher monitoring
-watch_path = ["src", "public"]
+watch_path = ["src", "assets"]
 
 # include `assets` in web platform
 [web.resource]
 
 # CSS style file
-style = ["tailwind.css"]
+style = ["/stylesheet.css"]
 
 # Javascript code file
 script = []

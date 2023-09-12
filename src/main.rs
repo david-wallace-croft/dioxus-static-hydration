@@ -16,8 +16,8 @@ async fn main() {
     &ServeConfigBuilder::new_with_router(
       dioxus_fullstack::router::FullstackRouterConfig::<Route>::default(),
     )
-    .assets_path("docs")
-    .incremental(IncrementalRendererConfig::default().static_dir("docs"))
+    .assets_path("dist")
+    .incremental(IncrementalRendererConfig::default().static_dir("dist"))
     .build(),
   )
   .await
