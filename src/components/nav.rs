@@ -9,12 +9,7 @@ pub fn Nav(cx: Scope) -> Element {
       class: "box",
     span {
       class: "drum",
-      "CroftSoft Dioxus"
-    }
-    br { }
-    span {
-      class: "drum",
-      "Static Hydration Prototype",
+      "CroftSoft Dioxus Static Hydration Prototype",
     }
     nav {
     ul {
