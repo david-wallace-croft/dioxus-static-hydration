@@ -1,15 +1,12 @@
-//! Run with:
-//!
-//! ```sh
-//! dx build --features web --release
-//! cargo run --features ssr
-//! ```
-
 #![allow(non_snake_case, unused)]
 use dioxus::prelude::*;
 use dioxus_fullstack::{launch, prelude::*};
 use dioxus_router::prelude::*;
+use route::Route;
 use serde::{Deserialize, Serialize};
+
+pub mod components;
+pub mod route;
 
 // Generate all routes and output them to the docs path
 #[cfg(feature = "ssr")]
@@ -41,46 +38,46 @@ fn main() {
 #[cfg(not(any(feature = "web", feature = "ssr")))]
 fn main() {}
 
-#[derive(Clone, Routable, Debug, PartialEq, Serialize, Deserialize)]
-enum Route {
-  #[route("/")]
-  Home {},
-  #[route("/blog")]
-  Blog,
-}
+// #[derive(Clone, Routable, Debug, PartialEq, Serialize, Deserialize)]
+// enum Route {
+//   #[route("/")]
+//   Home {},
+//   #[route("/blog")]
+//   Blog,
+// }
 
-#[inline_props]
-fn Blog(cx: Scope) -> Element {
-  render! {
-      Link { to: Route::Home {}, "Go to counter" }
-      table {
-          tbody {
-              for _ in 0..100 {
-                  tr {
-                      for _ in 0..100 {
-                          td { "hello world!" }
-                      }
-                  }
-              }
-          }
-      }
-  }
-}
+// #[inline_props]
+// fn Blog(cx: Scope) -> Element {
+//   render! {
+//       Link { to: Route::Home {}, "Go to counter" }
+//       table {
+//           tbody {
+//               for _ in 0..100 {
+//                   tr {
+//                       for _ in 0..100 {
+//                           td { "hello world!" }
+//                       }
+//                   }
+//               }
+//           }
+//       }
+//   }
+// }
 
-#[inline_props]
-fn Home(cx: Scope) -> Element {
-  let mut count = use_state(cx, || 0);
-  let text = use_state(cx, || "...".to_string());
+// #[inline_props]
+// fn Home(cx: Scope) -> Element {
+//   let mut count = use_state(cx, || 0);
+//   let text = use_state(cx, || "...".to_string());
 
-  cx.render(rsx! {
-      Link {
-          to: Route::Blog {},
-          "Go to blog"
-      }
-      div {
-          h1 { "High-Five counter: {count}" }
-          button { onclick: move |_| count += 1, "Up high!" }
-          button { onclick: move |_| count -= 1, "Down low!" }
-      }
-  })
-}
+//   cx.render(rsx! {
+//       Link {
+//           to: Route::Blog {},
+//           "Go to blog"
+//       }
+//       div {
+//           h1 { "High-Five counter: {count}" }
+//           button { onclick: move |_| count += 1, "Up high!" }
+//           button { onclick: move |_| count -= 1, "Down low!" }
+//       }
+//   })
+// }
