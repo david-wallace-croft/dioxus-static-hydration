@@ -20,9 +20,9 @@ pub fn Colophon(cx: Scope) -> Element {
       "The open source repository for this website is hosted on GitHub:",
     br { },
     a {
-      href: "https://github.com/dallasrust/website-dioxus",
+      href: "https://github.com/david-wallace-croft/dioxus-static-hydration",
       target: "_blank",
-      "https://github.com/dallasrust/website-dioxus"
+      "https://github.com/david-wallace-croft/dioxus-static-hydration"
     }
     }
     }

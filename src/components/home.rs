@@ -12,7 +12,7 @@ pub fn Home(cx: Scope) -> Element {
       "CroftSoft Dioxus Static Hydration Prototype"
     }
     div {
-      h1 { "High-Five counter: {count}" }
+      p { "High-Five counter: {count}" }
       button { onclick: move |_| count += 1, "Up high!" }
       button { onclick: move |_| count -= 1, "Down low!" }
     }
