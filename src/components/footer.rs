@@ -9,9 +9,9 @@ pub fn Footer(cx: Scope) -> Element {
       dangerous_inner_html: "&copy;",
       " 2023 "
       a {
-        href: "https://github.com/dallasrust/website-dioxus",
+        href: "https://www.croftsoft.com/",
         target: "_blank",
-        "Dallas Rust User Meetup Contributors"
+        "CroftSoft Inc"
       }
     }
   }

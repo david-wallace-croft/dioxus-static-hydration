@@ -1,0 +1,29 @@
+{
+  "name": "dioxus-static-hydration",
+  "version": "0.0.0-SNAPSHOT",
+  "description": "CroftSoft Dioxus Static Hydration Prototype",
+  "scripts": {
+    "hydrate": "dx build --features web --release",
+    "prerender": "cargo run --features ssr --release",
+    "prettier": "prettier dist --ignore-path .prettierignore --write",
+    "serve": "http-server dist -o",
+    "start": "npm run hydrate && npm run prerender && npm run prettier && npm run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david-wallace-croft/dioxus-prototype.git"
+  },
+  "keywords": [
+    "Dioxus"
+  ],
+  "author": "David Wallace Croft <david@CroftSoft.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/david-wallace-croft/dioxus-prototype/issues"
+  },
+  "homepage": "https://github.com/david-wallace-croft/dioxus-prototype#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "3.0.3"
+  }
+}
