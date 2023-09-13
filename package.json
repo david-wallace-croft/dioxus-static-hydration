@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/david-wallace-croft/dioxus-prototype.git"
+    "url": "git+https://github.com/david-wallace-croft/dioxus-static-hydration.git"
   },
   "keywords": [
     "Dioxus"
@@ -19,9 +19,9 @@
   "author": "David Wallace Croft <david@CroftSoft.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/david-wallace-croft/dioxus-prototype/issues"
+    "url": "https://github.com/david-wallace-croft/dioxus-static-hydration/issues"
   },
-  "homepage": "https://github.com/david-wallace-croft/dioxus-prototype#readme",
+  "homepage": "https://github.com/david-wallace-croft/dioxus-static-hydration#readme",
   "devDependencies": {
     "http-server": "^14.1.1",
     "prettier": "3.0.3"
