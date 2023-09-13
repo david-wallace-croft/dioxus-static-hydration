@@ -17,7 +17,7 @@
   - https://github.com/DioxusLabs/dioxus/tree/master/packages/cli
 - Install npm
   - npm installs utilities such as prettier
-  - npm scripts runs the dx and cargo commands
+  - npm scripts run the dx and cargo commands
   - npm can be installed by installing node.js
   - https://nodejs.org/
 - npm install
