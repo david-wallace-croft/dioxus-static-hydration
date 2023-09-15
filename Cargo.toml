@@ -1,18 +1,27 @@
 [package]
-name = "static-hydrated"
+name = "dioxus-static-hydration"
 version = "0.0.0-SNAPSHOT"
 edition = "2021"
 publish = false
 
+# [[bin]]
+# name = "hydrate"
+# required-features = ["hydrate"]
+
+[[bin]]
+name = "prerender"
+required-features = ["prerender"]
+
 [dependencies]
 dioxus = "0.4.0"
-dioxus-fullstack = { version = "0.4.1", features = ["router"] }
+dioxus-fullstack = { version = "0.4.1", optional = true }
 dioxus-router = "0.4.1"
-dioxus-web = { version = "0.4.0", features = ["hydrate"], optional = true }
+dioxus-web = { version = "0.4.0" }
+log = "0.4.20"
 serde = "1.0.188"
 tokio = { version = "1.32.0", features = ["full"], optional = true }
+wasm-logger = "0.2.0"
 
 [features]
-default = []
-ssr = ["tokio", "dioxus-fullstack/ssr"]
-web = ["dioxus-web"]
+hydrate = ["dioxus-fullstack/router", "dioxus-web/hydrate"]
+prerender = ["dioxus-fullstack/router", "dioxus-fullstack/ssr", "tokio"]

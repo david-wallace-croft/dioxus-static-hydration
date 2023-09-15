@@ -1,15 +1,9 @@
-#![allow(non_snake_case, unused)]
-use dioxus::prelude::*;
-use dioxus_fullstack::{launch, prelude::*};
-use dioxus_router::prelude::*;
-use route::Route;
-use serde::{Deserialize, Serialize};
-
-pub mod components;
-pub mod route;
+use dioxus_static_hydration::launch;
+#[cfg(feature = "hydrate")]
+use dioxus_static_hydration::route::Route;
 
 // Generate all routes and output them to the docs path
-#[cfg(feature = "ssr")]
+#[cfg(feature = "prerender")]
 #[tokio::main]
 async fn main() {
   pre_cache_static_routes_with_props(
@@ -24,8 +18,7 @@ async fn main() {
   .unwrap();
 }
 
-// Hydrate the page
-#[cfg(feature = "web")]
+#[cfg(feature = "hydrate")]
 fn main() {
   dioxus_web::launch_with_props(
     dioxus_fullstack::router::RouteWithCfg::<Route>,
@@ -35,49 +28,7 @@ fn main() {
   );
 }
 
-#[cfg(not(any(feature = "web", feature = "ssr")))]
-fn main() {}
-
-// #[derive(Clone, Routable, Debug, PartialEq, Serialize, Deserialize)]
-// enum Route {
-//   #[route("/")]
-//   Home {},
-//   #[route("/blog")]
-//   Blog,
-// }
-
-// #[inline_props]
-// fn Blog(cx: Scope) -> Element {
-//   render! {
-//       Link { to: Route::Home {}, "Go to counter" }
-//       table {
-//           tbody {
-//               for _ in 0..100 {
-//                   tr {
-//                       for _ in 0..100 {
-//                           td { "hello world!" }
-//                       }
-//                   }
-//               }
-//           }
-//       }
-//   }
-// }
-
-// #[inline_props]
-// fn Home(cx: Scope) -> Element {
-//   let mut count = use_state(cx, || 0);
-//   let text = use_state(cx, || "...".to_string());
-
-//   cx.render(rsx! {
-//       Link {
-//           to: Route::Blog {},
-//           "Go to blog"
-//       }
-//       div {
-//           h1 { "High-Five counter: {count}" }
-//           button { onclick: move |_| count += 1, "Up high!" }
-//           button { onclick: move |_| count -= 1, "Down low!" }
-//       }
-//   })
-// }
+#[cfg(not(feature = "hydrate"))]
+fn main() {
+  launch();
+}

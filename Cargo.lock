@@ -580,6 +580,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "dioxus-static-hydration"
+version = "0.0.0-SNAPSHOT"
+dependencies = [
+ "dioxus",
+ "dioxus-fullstack",
+ "dioxus-router",
+ "dioxus-web",
+ "log",
+ "serde",
+ "tokio",
+ "wasm-logger",
+]
+
+[[package]]
 name = "dioxus-web"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2002,18 +2016,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3"
 
 [[package]]
-name = "static-hydrated"
-version = "0.0.0-SNAPSHOT"
-dependencies = [
- "dioxus",
- "dioxus-fullstack",
- "dioxus-router",
- "dioxus-web",
- "serde",
- "tokio",
-]
-
-[[package]]
 name = "syn"
 version = "1.0.109"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2352,6 +2354,17 @@ name = "wasm-bindgen-shared"
 version = "0.2.87"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ca6ad05a4870b2bf5fe995117d3728437bd27d7cd5f06f13c17443ef369775a1"
+
+[[package]]
+name = "wasm-logger"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "074649a66bb306c8f2068c9016395fa65d8e08d2affcbf95acf3c24c3ab19718"
+dependencies = [
+ "log",
+ "wasm-bindgen",
+ "web-sys",
+]
 
 [[package]]
 name = "web-sys"

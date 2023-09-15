@@ -3,11 +3,12 @@
   "version": "0.0.0-SNAPSHOT",
   "description": "CroftSoft Dioxus Static Hydration Prototype",
   "scripts": {
-    "hydrate": "dx build --features web --release",
-    "prerender": "cargo run --features ssr --release",
+    "clean": "rimraf dist",
+    "hydrate": "dx build --features=hydrate --release",
+    "prerender": "cargo run --bin prerender --features=prerender --release",
     "prettier": "prettier dist --ignore-path .prettierignore --write",
     "serve": "http-server dist -o",
-    "start": "npm run hydrate && npm run prerender && npm run prettier && npm run serve"
+    "start": "npm run clean && npm run hydrate && npm run prerender && npm run prettier && npm run serve"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/david-wallace-croft/dioxus-static-hydration#readme",
   "devDependencies": {
     "http-server": "^14.1.1",
-    "prettier": "3.0.3"
+    "prettier": "3.0.3",
+    "rimraf": "^5.0.1"
   }
 }
