@@ -44,6 +44,7 @@
 
 ## TODO
 
+- Restore the prettier configuration
 - Make a separate binary for the hydration step
 - Bump the version number
 
