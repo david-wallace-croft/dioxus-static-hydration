@@ -1,7 +1,7 @@
 [application]
 
 # App (Project) Name
-name = "Dioxus"
+name = "CroftSoft Dioxus Static Hydration Prototype"
 
 # Dioxus App Default Platform
 # desktop, web, mobile, ssr

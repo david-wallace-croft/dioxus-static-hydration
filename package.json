@@ -3,13 +3,15 @@
   "version": "0.0.0-SNAPSHOT",
   "description": "CroftSoft Dioxus Static Hydration Prototype",
   "scripts": {
-    "build": "npm run hydrate && npm run prerender && npm run prettier",
     "clean": "rimraf dist",
+    "dist": "npm run clean && npm run make",
+    "format": "prettier dist --ignore-path .prettierignore --write",
     "hydrate": "dx build --features=hydrate --release",
     "prerender": "cargo run --bin prerender --features=prerender --release",
-    "prettier": "prettier dist --ignore-path .prettierignore --write",
+    "make": "npm run hydrate && npm run prerender && npm run format",
     "serve": "http-server dist -o",
-    "start": "npm run clean && npm run build && npm run serve"
+    "start": "dx serve --hot-reload",
+    "test": "npm run dist && npm run serve"
   },
   "repository": {
     "type": "git",
