@@ -24,28 +24,50 @@
 ## Hot Reload
 
 - cd dioxus-static-hydration/
-- dx serve --hot-reload
+- npm install
+  - Installs the utility http-server to serve the HTML
+  - Installs the utility pretter to format the HTML
+  - Installs the utility rimraf to remove distribution directory dist/
+- npm start
 - Open your browser to http://localhost:8080/
 - Make changes to the HTML in src/lib.rs or the CSS in public/stylesheet.css
 - Note that the changes are updated in your browser as soon as you save
 
-## Static Prerendering with Hydration
+## Test Static Prerendering with Hydration
 
-- cd dioxus-static-hydration/
-- npm install
-  - Installs the utility pretter to format the HTML
-  - Installs the utility http-server to serve the HTML
-- npm start
+- npm test
   - Deletes the distribution directory dist/ to remove files from a previous run
   - Makes the index.html page with the hydration code
   - Inserts the prerendered HTML
   - Formats the HTML using the prettier utility
-  - Launches http-server to show the HTML in the browser
+  - Launches http-server to serve the HTML
+  - Opens your browser to the home page
+
+## Other Commands
+
+- npm run clean
+  - Deletes the distribution directory dist/ to remove files from a previous run
+- npm run dist
+  - Same as npm test
+  - Except that it does not start http-server and open the browser
+- npm run format
+  - Runs the utility prettier
+- npm run hydrate
+  - Makes the index.html page with the hydration code
+- npm run prerender
+  - Inserts the prerendered HTML
+- npm run make
+  - Makes the index.html page with the hydration code
+  - Inserts the prerendered HTML
+  - Runs the utility prettier
+  - But does not start by deleting dist/
+- npm run serve
+  - Starts the http-server
+  - Opens the browser
 
 ## TODO
 
 - Restore the prettier configuration
-- Make a separate binary for the hydration step
 - Bump the version number
 
 ## History
