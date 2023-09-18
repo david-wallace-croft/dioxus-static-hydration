@@ -1,12 +1,14 @@
 [package]
-name = "dioxus-static-hydration"
-version = "0.0.0-SNAPSHOT"
+authors = ["David Wallace Croft <david@CroftSoft.com>"]
+description = "Dallas Rust User Meetup website using Dioxus"
 edition = "2021"
+keywords = ["dioxus"]
+license = "MIT"
+name = "dioxus-static-hydration"
 publish = false
-
-# [[bin]]
-# name = "hydrate"
-# required-features = ["hydrate"]
+readme = "README.md"
+repository = "https://github.com/david-wallace-croft/dioxus-static-hydration"
+version = "0.0.0-SNAPSHOT"
 
 [[bin]]
 name = "prerender"
@@ -16,7 +18,7 @@ required-features = ["prerender"]
 dioxus = "0.4.0"
 dioxus-fullstack = { version = "0.4.1", optional = true }
 dioxus-router = "0.4.1"
-dioxus-web = { version = "0.4.0" }
+dioxus-web = "0.4.0"
 log = "0.4.20"
 serde = "1.0.188"
 tokio = { version = "1.32.0", features = ["full"], optional = true }

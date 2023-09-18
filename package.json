@@ -1,7 +1,24 @@
 {
-  "name": "dioxus-static-hydration",
-  "version": "0.0.0-SNAPSHOT",
+  "author": "David Wallace Croft <david@CroftSoft.com>",
+  "bugs": {
+    "url": "https://github.com/david-wallace-croft/dioxus-static-hydration/issues"
+  },
   "description": "CroftSoft Dioxus Static Hydration Prototype",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "3.0.3",
+    "rimraf": "^5.0.1"
+  },
+  "homepage": "https://github.com/david-wallace-croft/dioxus-static-hydration#readme",
+  "keywords": [
+    "Dioxus"
+  ],
+  "license": "MIT",
+  "name": "dioxus-static-hydration",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david-wallace-croft/dioxus-static-hydration.git"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "dist": "npm run clean && npm run make",
@@ -13,22 +30,5 @@
     "start": "dx serve --hot-reload",
     "test": "npm run dist && npm run serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/david-wallace-croft/dioxus-static-hydration.git"
-  },
-  "keywords": [
-    "Dioxus"
-  ],
-  "author": "David Wallace Croft <david@CroftSoft.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/david-wallace-croft/dioxus-static-hydration/issues"
-  },
-  "homepage": "https://github.com/david-wallace-croft/dioxus-static-hydration#readme",
-  "devDependencies": {
-    "http-server": "^14.1.1",
-    "prettier": "3.0.3",
-    "rimraf": "^5.0.1"
-  }
+  "version": "0.0.0-SNAPSHOT"
 }

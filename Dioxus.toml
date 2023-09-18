@@ -1,46 +1,20 @@
 [application]
-
-# App (Project) Name
-name = "CroftSoft Dioxus Static Hydration Prototype"
-
-# Dioxus App Default Platform
-# desktop, web, mobile, ssr
+asset_dir = "assets"
 default_platform = "web"
-
-# `build` & `serve` dist path
+name = "CroftSoft Dioxus Static Hydration Prototype"
 out_dir = "dist"
 
-# resource (public) file folder
-asset_dir = "assets"
-
 [web.app]
-
-# HTML title tag content
 title = "CroftSoft Dioxus Static Hydration Prototype"
 
 [web.watcher]
-
-# when watcher trigger, regenerate the `index.html`
 reload_html = true
-
-# which files or dirs will be watcher monitoring
 watch_path = ["src", "assets"]
 
-# include `assets` in web platform
 [web.resource]
-
-# CSS style file
 style = ["/stylesheet.css"]
-
-# Javascript code file
 script = []
 
 [web.resource.dev]
-
-# serve: [dev-server] only
-
-# CSS style file
-style = []
-
-# Javascript code file
 script = []
+style = []
