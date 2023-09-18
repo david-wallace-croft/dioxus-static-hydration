@@ -1,7 +1,7 @@
 [application]
 asset_dir = "assets"
 default_platform = "web"
-name = "CroftSoft Dioxus Static Hydration Prototype"
+name = "dioxus-static-hydration"
 out_dir = "dist"
 
 [web.app]

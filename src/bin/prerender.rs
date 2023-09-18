@@ -1,9 +1,5 @@
-use dioxus::prelude::*;
-use dioxus_fullstack::{launch, prelude::*};
-use dioxus_router::prelude::*;
-use dioxus_static_hydration::launch;
+use dioxus_fullstack::prelude::*;
 use dioxus_static_hydration::route::Route;
-use serde::{Deserialize, Serialize};
 
 #[tokio::main]
 async fn main() {
