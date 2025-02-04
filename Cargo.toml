@@ -1,6 +1,6 @@
 [package]
 authors = ["David Wallace Croft <david@CroftSoft.com>"]
-description = "Dallas Rust User Meetup website using Dioxus"
+description = "CroftSoft Dioxus Static Hydration"
 edition = "2021"
 keywords = ["dioxus"]
 license = "MIT"
@@ -8,22 +8,27 @@ name = "dioxus-static-hydration"
 publish = false
 readme = "README.md"
 repository = "https://github.com/david-wallace-croft/dioxus-static-hydration"
-version = "0.0.0-SNAPSHOT"
-
-[[bin]]
-name = "prerender"
-required-features = ["prerender"]
+version = "0.6.0-SNAPSHOT"
 
 [dependencies]
-dioxus = "0.4.0"
-dioxus-fullstack = { version = "0.4.1", optional = true }
-dioxus-router = "0.4.1"
-dioxus-web = "0.4.0"
-log = "0.4.20"
-serde = "1.0.188"
-tokio = { version = "1.32.0", features = ["full"], optional = true }
-wasm-logger = "0.2.0"
+dioxus = { version = "0.6.2", features = ["fullstack", "router"] }
+# dioxus-isrg = "0.6.2"
+dioxus-logger = "0.6.2"
+serde = "1.0.217"
+tracing = "0.1.41"
 
 [features]
-hydrate = ["dioxus-fullstack/router", "dioxus-web/hydrate"]
-prerender = ["dioxus-fullstack/router", "dioxus-fullstack/ssr", "tokio"]
+default = ["web"]
+web = ["dioxus/web"]
+
+[profile]
+
+[profile.wasm-dev]
+inherits = "dev"
+opt-level = 1
+
+[profile.server-dev]
+inherits = "dev"
+
+[profile.android-dev]
+inherits = "dev"

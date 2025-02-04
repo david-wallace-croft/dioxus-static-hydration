@@ -1,12 +1,12 @@
-# Formatting configuration for the CroftSoft Dioxus Static Hydration Prototype
+# Formatting configuration for the CroftSoft Dioxus Static Hydration
 # https://rust-lang.github.io/rustfmt/
 #
-# Copyright 2023 CroftSoft Inc
+# Copyright 2023-2025 CroftSoft Inc
 # https://www.CroftSoft.com/
 # Author: David Wallace Croft
 # https://www.CroftSoft.com/people/david/
 # Created: 2023-09-11
-# Updated: 2023-09-11
+# Updated: 2025-02-03
 
 array_width = 1
 # condense_wildcard_suffixes = true
