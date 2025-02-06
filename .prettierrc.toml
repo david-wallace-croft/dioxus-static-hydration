@@ -1,5 +1,3 @@
-# .prettierrc.toml
-
 bracketSameLine = true
 endOfLine = "lf"
 htmlWhitespaceSensitivity = "css"
