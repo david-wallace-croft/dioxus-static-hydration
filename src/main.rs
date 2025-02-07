@@ -1,3 +1,4 @@
+use ::dioxus::logger;
 use ::dioxus::prelude::*;
 use ::dioxus_static_hydration::route::Route;
 use ::tracing::{info, Level};
@@ -13,7 +14,7 @@ async fn static_routes() -> Result<Vec<String>, ServerFnError> {
 }
 
 fn main() {
-  ::dioxus_logger::init(Level::INFO).expect("Failed to initialize logger");
+  logger::init(Level::INFO).expect("Failed to initialize logger");
 
   info!(
     "CroftSoft Dioxus Static Hydration v{}",

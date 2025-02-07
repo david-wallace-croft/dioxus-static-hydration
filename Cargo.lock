@@ -565,7 +565,6 @@ name = "dioxus-static-hydration"
 version = "0.6.0-SNAPSHOT"
 dependencies = [
  "dioxus",
- "dioxus-logger",
  "serde",
  "tracing",
 ]
