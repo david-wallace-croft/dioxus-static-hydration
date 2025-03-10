@@ -1,18 +1,19 @@
 [package]
 authors = ["David Wallace Croft <david@CroftSoft.com>"]
 description = "CroftSoft Dioxus Static Hydration"
-edition = "2021"
+edition = "2024"
 keywords = ["dioxus"]
 license = "MIT"
 name = "dioxus-static-hydration"
 publish = false
 readme = "README.md"
 repository = "https://github.com/david-wallace-croft/dioxus-static-hydration"
-version = "0.6.0-SNAPSHOT"
+rust-version = "1.85.0"
+version = "0.6.3-SNAPSHOT"
 
 [dependencies]
-dioxus = { version = "0.6.2", features = ["fullstack", "router"] }
-serde = "1.0.217"
+dioxus = { version = "0.6.3", features = ["fullstack", "router"] }
+serde = "1.0.219"
 tracing = "0.1.41"
 
 [features]
