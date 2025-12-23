@@ -1,9 +1,12 @@
 # CroftSoft Dioxus Static Hydration
 
 [![MIT licensed][mit-badge]][mit-url]
+[![Rust][status-badge]][status-url]
 
 [mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [mit-url]: https://github.com/david-wallace-croft/dioxus-static-hydration/blob/main/LICENSE.txt
+[status-badge]: https://github.com/david-wallace-croft/dioxus-static-hydration/actions/workflows/rust.yml/badge.svg
+[status-url]: https://github.com/david-wallace-croft/dioxus-static-hydration/actions/workflows/rust.yml
 
 - Prototype of static prerendering with hydration using Dioxus
 - Makes a Content Delivery Network (CDN)-compatible static HTML distribution
