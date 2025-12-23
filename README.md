@@ -6,6 +6,8 @@
 [mit-url]: https://github.com/david-wallace-croft/dioxus-static-hydration/blob/main/LICENSE.txt
 
 - Prototype of static prerendering with hydration using Dioxus
+- Makes a Content Delivery Network (CDN)-compatible static HTML distribution
+- Includes static prerendering with client-side hydration
 
 ## Utilities Installation
 
@@ -13,7 +15,7 @@
   - cargo is installed when you install Rust
   - https://www.rust-lang.org/
 - Install the Dioxus Command Line Interface (CLI) "dx"
-  - cargo install dioxus-cli --locked
+  - cargo install dioxus-cli
   - https://github.com/DioxusLabs/dioxus/tree/master/packages/cli
 - Install npm
   - npm installs utilities such as prettier
@@ -26,36 +28,57 @@
 - npm install
 - npm test
 
-## npm scripts
+## Hot Reload
 
+- cd project-name/
+- npm install
+  - Installs the utility http-server to serve the HTML
+  - Installs the utility pretter to format the HTML
+  - Installs the utility rimraf to remove distribution directory dist/
 - npm start
   - Used during development
   - Builds, watches, and serves with hot reloading
   - Automatically opens a browser window
+- Make changes to the HTML in src/lib.rs or the CSS in public/stylesheet.css
+- Note that the changes are updated in your browser as soon as you save
+
+## Test Static Prerendering with Hydration
+
+- npm test
+  - Deletes the build and distribution directories to start clean
+  - Makes the index.html page with the hydration code
+  - Inserts the prerendered HTML
+  - Launches http-server to serve the HTML
+  - Opens your browser to the home page
+
+## Additional Run Script Commands
+
 - npm run clean
-  - Deletes the build output and distribution directories
-- npm run build
-  - Builds a release version with static site generation (SSG)
-- npm run merge
-  - Makes the distribution directory dist/
-  - Merges the release build into dist/
-  - Merges the generated SSG files into dist/
-  - Merges the static files in merge/ into dist/
+  - Deletes the build and distribution directories to start clean
+- npm run copy
+  - Copies from the build to the distribution directory dist/
 - npm run dist
-  - Runs the clean, build, and merge scripts
+  - Runs the clean, build, and copy scripts
   - Used to generate an SSG distribution in the dist/ directory
   - The dist/ files can be hosted on a Content Delivery Network (CDN)
-- npm run serve
-  - Serves the files in the distribution directory dist/
-  - Automatically opens a browser window
-- npm test
-  - Runs the dist and serve scripts
-  - Used to test the SSG distribution prior to hosting on a CDN
 - npm run format
-  - Runs the "prettier" utility to format the generated HTML files
-  - Useful for analyzing or debugging the generated HTML files
+  - Runs the "prettier" utility to format the generated files in dist/
+  - Useful for analyzing or debugging the generated files
+- npm run serve
+  - Starts the http-server in dist/
+  - Opens the browser
+- npm start
+  - Described in a previous section
+- npm test
+  - Described in a previous section
+
+## Links
+
+- CroftSoft Rust-Dioxus Project Setup Tutorial
+  - https://www.croftsoft.com/library/tutorials/rust-dioxus-project-setup/
 
 ## History
 
 - 2023-09-11: Initial release
 - 2025-02-03: Updated from Dioxus v0.4 to v0.6
+- 2025-12-25: Updated from Dioxus v0.6 to v0.7

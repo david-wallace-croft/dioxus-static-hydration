@@ -1,12 +1,10 @@
-use super::components::about::About;
-use super::components::colophon::Colophon;
-use super::components::home::Home;
-use super::components::template::Template;
+use super::component::about::About;
+use super::component::colophon::Colophon;
+use super::component::home::Home;
+use super::component::template::Template;
 use ::dioxus::prelude::*;
-use ::serde::{Deserialize, Serialize};
 
-#[derive(Clone, Routable, Debug, PartialEq, Serialize, Deserialize)]
-#[rustfmt::skip]
+#[derive(Clone, Debug, PartialEq, Routable)]
 pub enum Route {
   #[layout(Template)]
   #[route("/")]

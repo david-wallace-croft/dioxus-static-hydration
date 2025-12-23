@@ -1,35 +1,49 @@
 [application]
-asset_dir = "assets"
-default_platform = "web"
-name = "dioxus-static-hydration"
+
+# Web `build` & `serve` dist path
 out_dir = "dist"
 
-[application.plugins]
-available = true
-required = []
+# resource (static) file folder
+asset_dir = "public"
 
-[bundler]
-category = "Utility"
-copyright = "Copyright 2023-2025 CroftSoft Inc"
-icon = ["icons/icon.png"]
-identifier = "com.croftsoft.app.dioxus-static-hydration"
-long_description = """
-CroftSoft Dioxus Static Hydration
-"""
-publisher = "dioxus-static-hydration"
-resources = ["assets/*"]
-short_description = "CroftSoft Dioxus Static Hydration"
+[web.wasm_opt]
+# The level wasm-opt should target. z is the smallest. 4 is the fastest.
+level = "4"
 
 [web.app]
+
+# HTML title tag content
 title = "CroftSoft Dioxus Static Hydration"
 
 [web.watcher]
-reload_html = true
-watch_path = ["src", "assets"]
 
-[web.resource]
-script = []
-style = []
+index_on_404 = true
 
-[web.resource.dev]
-script = []
+watch_path = ["src", "examples"]
+
+[bundle]
+# Bundle identifier
+identifier = "io.github.dioxus-static-hydration"
+
+# Bundle publisher
+publisher = "dioxus-static-hydration"
+
+# Bundle icon
+icon = ["icons/icon.png"]
+
+# Bundle resources
+resources = ["public/*"]
+
+# Bundle copyright
+copyright = ""
+
+# Bundle category
+category = "Utility"
+
+# Bundle short description
+short_description = "An amazing dioxus application."
+
+# Bundle long description
+long_description = """
+An amazing dioxus application.
+"""
