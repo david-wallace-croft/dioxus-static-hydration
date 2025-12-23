@@ -12,7 +12,8 @@ pub fn Template() -> Element {
 
   rsx! {
     document::Stylesheet {
-      href: CSS
+      href: CSS,
+      rel: "stylesheet",
     }
     document::Link {
       href: FAVICON,
