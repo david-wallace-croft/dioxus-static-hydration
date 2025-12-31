@@ -50,7 +50,6 @@
 - npm test
   - Deletes the build and distribution directories to start clean
   - Makes the index.html page with the hydration code
-  - Inserts the prerendered HTML
   - Launches http-server to serve the HTML
   - Opens your browser to the home page
 
@@ -67,6 +66,8 @@
 - npm run format
   - Runs the "prettier" utility to format the generated files in dist/
   - Useful for analyzing or debugging the generated files
+- npm run merge
+  - Merges the static files in merge/ into dist/
 - npm run serve
   - Starts the http-server in dist/
   - Opens the browser
