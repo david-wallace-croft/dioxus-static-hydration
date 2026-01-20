@@ -12,7 +12,7 @@ rust-version = "1.92.0"
 version = "0.7.0-SNAPSHOT"
 
 [dependencies]
-dioxus = { version = "0.7.2", features = ["fullstack", "router"] }
+dioxus = { version = "0.7.3", features = ["fullstack", "router"] }
 tracing = "0.1.44"
 
 [features]
